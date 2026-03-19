@@ -129,7 +129,7 @@ export default function StudyModal({ subject, onClose }: Props) {
                   <BookOpen size={14} /> Resumo
                 </button>
                 <button
-                  onClick={startExercises}
+                  onClick={() => exOrder.length > 0 ? setTab('exercicios') : startExercises()}
                   className={`py-3 px-4 text-sm font-bold border-b-2 transition-colors flex items-center gap-2 ${tab === 'exercicios' ? 'text-primary border-primary' : 'text-muted-foreground border-transparent hover:text-foreground'}`}
                 >
                   <CheckSquare size={14} /> Exercícios
