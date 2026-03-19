@@ -15,10 +15,8 @@ const ICONS: Record<string, React.ReactNode> = {
 export default function Index() {
   const [activeSubject, setActiveSubject] = useState<Subject | null>(null);
 
-  const daysLeft = useMemo(() => {
-    const d = Math.ceil((new Date('2026-03-29T08:00:00').getTime() - Date.now()) / 86400000);
-    return d > 0 ? d : 0;
-  }, []);
+  const concursoDate = new Date(2026, 2, 29); // 29/03/2026 local
+  const daysLeft = Math.max(0, differenceInDays(concursoDate, startOfDay(new Date())));
 
   const stats = [
     { value: daysLeft.toString(), label: 'Dias p/ Prova', warn: true },
