@@ -1,12 +1,12 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Plus, Monitor, Globe, ArrowRight, Info, Layers } from 'lucide-react';
+import { BookOpen, Calculator, Monitor, Globe, ArrowRight, Info, Layers } from 'lucide-react';
 import { SUBJECTS, type Subject } from '@/data/studyData';
 import StudyModal from '@/components/StudyModal';
 
 const ICONS: Record<string, React.ReactNode> = {
   book: <BookOpen size={24} />,
-  calculator: <Plus size={24} />,
+  calculator: <Calculator size={24} />,
   monitor: <Monitor size={24} />,
   globe: <Globe size={24} />,
 };
