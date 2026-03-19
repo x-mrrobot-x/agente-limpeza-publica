@@ -40,7 +40,7 @@ export default function StudyModal({ subject, onClose }: Props) {
     return () => window.removeEventListener('keydown', handler);
   }, [onClose]);
 
-  const initExercises = useCallback(() => {
+  const startExercises = useCallback(() => {
     if (!subject) return;
     const order = shuffle(subject.exercises.map((_, i) => i));
     setExOrder(order);
@@ -49,12 +49,8 @@ export default function StudyModal({ subject, onClose }: Props) {
     setAnswered(false);
     setSelected(null);
     setOptMapping(shuffle([0, 1, 2, 3]));
-  }, [subject]);
-
-  const startExercises = useCallback(() => {
-    initExercises();
     setTab('exercicios');
-  }, [initExercises]);
+  }, [subject]);
 
   const currentEx = useMemo<Exercise | null>(() => {
     if (!subject || exOrder.length === 0 || exIdx >= exOrder.length) return null;
@@ -133,10 +129,7 @@ export default function StudyModal({ subject, onClose }: Props) {
                   <BookOpen size={14} /> Resumo
                 </button>
                 <button
-                  onClick={() => {
-                    if (exOrder.length === 0) initExercises();
-                    setTab('exercicios');
-                  }}
+                  onClick={() => exOrder.length > 0 ? setTab('exercicios') : startExercises()}
                   className={`py-3 px-4 text-sm font-bold border-b-2 transition-colors flex items-center gap-2 ${tab === 'exercicios' ? 'text-primary border-primary' : 'text-muted-foreground border-transparent hover:text-foreground'}`}
                 >
                   <CheckSquare size={14} /> Exercícios

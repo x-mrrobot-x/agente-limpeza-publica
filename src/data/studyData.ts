@@ -308,7 +308,7 @@ export const SUBJECTS: Subject[] = [
         title: 'O Município de Macarani',
         items: [
           'Localização: Bahia, mesorregião Centro-Sul Baiano, microrregião de Itapetinga',
-          'População: aproximadamente 22.768 habitantes',
+          'População: aproximadamente 15.000 habitantes',
           'Área: ~1.200 km²',
           'Bioma: 100% Mata Atlântica',
           'Distância de Salvador: ~600 km',
