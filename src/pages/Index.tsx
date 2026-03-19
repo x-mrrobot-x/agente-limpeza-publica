@@ -6,7 +6,7 @@ import StudyModal from '@/components/StudyModal';
 
 const ICONS: Record<string, React.ReactNode> = {
   book: <BookOpen size={24} />,
-  calculator: <Plus size={24} />,
+  calculator: <Calculator size={24} />,
   monitor: <Monitor size={24} />,
   globe: <Globe size={24} />,
 };
