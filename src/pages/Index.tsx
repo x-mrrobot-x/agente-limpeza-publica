@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
+import { differenceInDays, startOfDay } from 'date-fns';
 import { motion } from 'framer-motion';
 import { BookOpen, Calculator, Monitor, Globe, ArrowRight, Info, Layers } from 'lucide-react';
 import { SUBJECTS, type Subject } from '@/data/studyData';
