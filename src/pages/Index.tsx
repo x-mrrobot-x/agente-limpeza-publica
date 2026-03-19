@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Plus, Monitor, Globe, ArrowRight, Info, Layers } from 'lucide-react';
+import { BookOpen, Calculator, Monitor, Globe, ArrowRight, Info, Layers } from 'lucide-react';
 import { SUBJECTS, type Subject } from '@/data/studyData';
 import StudyModal from '@/components/StudyModal';
 
